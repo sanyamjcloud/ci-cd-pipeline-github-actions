@@ -1,64 +1,53 @@
-# GitHub Actions CI Pipeline
+## CI Pipeline Configuration
+This project uses GitHub Actions to run a basic CI pipeline.
 
-## 📌 Overview
-This repository demonstrates a basic **Continuous Integration (CI) pipeline** using **GitHub Actions** for a static HTML project.  
-The pipeline automatically validates the project whenever code is pushed or a pull request is created.
-
----
-
-## 🛠️ Project Structure
-
+- CI tool: GitHub Actions  
+- Runner: Ubuntu (ubuntu-latest)  
+- The pipeline runs automatically:
+  - When code is pushed to the main branch
+  - When a pull request is created for the main branch  
 
 ---
 
-## ⚙️ CI Pipeline Configuration
-- **CI Tool:** GitHub Actions
-- **Runner:** Ubuntu (ubuntu-latest)
-- **Trigger Events:**
-  - Push to `main` branch
-  - Pull request to `main` branch
+## Workflow Steps
+1. The workflow first downloads (checks out) the project code.  
+2. It checks whether the `index.html` file exists in the repository.  
+3. If the file is missing, the workflow fails and shows an error in the logs.  
 
 ---
 
-## 🔄 Workflow Steps
-1. Checkout source code from the repository  
-2. Validate that `index.html` file exists  
-3. Mark workflow as failed if validation fails  
+## Environment Variables and Secrets
+- Normal configuration values can be added as environment variables in the workflow file.  
+- Sensitive data like tokens or passwords should be stored using GitHub Secrets for security.  
 
 ---
 
-## 🔐 Environment Variables & Secrets
-- Environment variables can be defined inside the workflow YAML.
-- Sensitive data (tokens, passwords) should be stored securely using **GitHub Secrets**.
+## Failure Handling
+To understand how CI failures work, the workflow was intentionally broken by changing the validation step.  
+After checking the error logs, the issue was fixed and the pipeline ran successfully again.  
 
 ---
 
-## ❌ Failure Handling
-The workflow was intentionally tested by breaking validation conditions to observe failure logs.  
-After fixing the issue, the pipeline successfully passed, ensuring correct CI behavior.
+## Learning Outcomes
+- Learned how to create a GitHub Actions workflow.  
+- Understood how CI pipelines trigger automatically on push and pull requests.  
+- Learned how to read logs to debug CI failures.  
+- Understood the importance of keeping secrets secure.  
 
 ---
 
-## 📚 Learning Outcomes
-- Understanding GitHub Actions workflow structure  
-- Automating CI on push and pull requests  
-- Debugging failed pipelines using logs  
-- Secure handling of configuration and secrets  
-
----
-
-## 🚀 Tools & Technologies Used
+## Tools and Technologies Used
 - GitHub Actions  
 - YAML  
 - Ubuntu Linux  
-- Git & GitHub  
+- Git and GitHub  
 
 ---
 
-## 📸 Screenshots
-Screenshots of workflow execution and logs are added to demonstrate successful CI runs.
+## Screenshots
+Screenshots of the successful workflow run and logs are included to show the working CI pipeline.  
 
 ---
 
-## ✅ Conclusion
-This project confirms a working CI pipeline that ensures basic validation and automation, following DevOps best practices.
+## Conclusion
+This project helped me understand the basics of CI using GitHub Actions and how automation helps maintain code quality.
