@@ -17,6 +17,24 @@ This repository implements a CI/CD pipeline using GitHub Actions to automate bui
 * Test stage integration
 * Deployment workflow support
 
+## Pipeline Stages
+
+- Checkout repository code  
+- Set up environment  
+- Install dependencies  
+- Run validation/build steps  
+- Deployment stage  
+
+## Workflow File
+
+.github/workflows/deploy.yml  
+
+## Pipeline Execution
+
+Successful workflow runs can be monitored in the GitHub Actions tab.
+<img width="960" height="600" alt="Output2 (1)" src="https://github.com/user-attachments/assets/78939799-8e57-4d28-8822-f83b120316bb" />
+
+
 ## Workflow Architecture
 
 1. Developer pushes code to repository
